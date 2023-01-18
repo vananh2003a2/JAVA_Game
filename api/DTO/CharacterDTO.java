@@ -1,6 +1,6 @@
 package com.laptrinhjavaweb.api.DTO;
 
-public class CharacterOutput extends AbstractDTO {
+public class CharacterDTO extends AbstractDTO {
 	private String description ;
 
 	public String getDescription() {

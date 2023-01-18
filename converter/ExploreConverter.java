@@ -2,13 +2,14 @@ package com.laptrinhjavaweb.converter;
 
 import org.springframework.stereotype.Component;
 
-import com.laptrinhjavaweb.api.DTO.ExploreOutput;
+import com.laptrinhjavaweb.api.DTO.ExploreDTO;
 import com.laptrinhjavaweb.entity.ExploreEntity;
 
 @Component
 public class ExploreConverter {
-	public ExploreOutput toDTO(ExploreEntity entity) {
-		ExploreOutput dto = new ExploreOutput();
+	public ExploreDTO toDTO(ExploreEntity entity) {
+		ExploreDTO dto = new ExploreDTO();
+		dto.setId(entity.getId());
 		dto.setContentExplore(entity.getContentExplore());
 		return dto;
 	}

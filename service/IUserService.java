@@ -1,7 +1,7 @@
 package com.laptrinhjavaweb.service;
 
-import com.laptrinhjavaweb.api.DTO.UserInput;
+import com.laptrinhjavaweb.api.DTO.UserDTO;
 
 public interface IUserService {
-	UserInput save(UserInput userInput);
+	UserDTO save(UserDTO userInput);
 }

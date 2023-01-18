@@ -3,7 +3,7 @@ package com.laptrinhjavaweb.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.laptrinhjavaweb.api.DTO.UserInput;
+import com.laptrinhjavaweb.api.DTO.UserDTO;
 import com.laptrinhjavaweb.converter.UserConverter;
 import com.laptrinhjavaweb.entity.UserEntity;
 import com.laptrinhjavaweb.repository.UserRepository;
@@ -21,7 +21,7 @@ public class UserService implements IUserService {
 	private UserConverter userConverter;
 
 	@Override
-	public UserInput save(UserInput userInput) {
+	public UserDTO save(UserDTO userInput) {
 		UserEntity userEntity = new UserEntity();
 		userEntity.setFullName(userInput.getFullName());
 		userEntity.setEmail(userInput.getEmail());

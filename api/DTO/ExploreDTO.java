@@ -1,6 +1,6 @@
 package com.laptrinhjavaweb.api.DTO;
 
-public class ExploreOutput extends AbstractDTO {
+public class ExploreDTO extends AbstractDTO {
 	private String contentExplore;
 
 	public String getContentExplore() {

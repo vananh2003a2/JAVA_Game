@@ -1,6 +1,6 @@
 package com.laptrinhjavaweb.api.DTO;
 
-public class UserInput extends AbstractDTO {
+public class UserDTO extends AbstractDTO {
 	private String fullName;
 	private String email;
 	private String phone;
