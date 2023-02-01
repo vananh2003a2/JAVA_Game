@@ -9,7 +9,6 @@ import com.laptrinhjavaweb.entity.CharacterEntity;
 public class CharacterConverter {
 	public CharacterDTO toDTO(CharacterEntity entity) {
 		CharacterDTO dto = new CharacterDTO();
-		dto.setId(entity.getId());
 		dto.setDescription(entity.getDescription());
 		return dto;
 	}

@@ -5,32 +5,57 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-
 @Entity
 @Table(name = "feedback")
 @EntityListeners(AuditingEntityListener.class)
 public class FeedbackEntity extends BaseEntity {
+	@Column(name = "fullname")
+	private String fullName;
+	
+	@Column(name = "email")
+	private String email;
 
+	@Column(name = "phone")
+	private String phone;
+	
 	@Column(name = "content")
 	private String content;
+
+	@Column(name = "star")
+	private int star;
 
 	@Column(name = "time")
 	@CreationTimestamp
 	private Date time;
 
-	@Column(name = "star")
-	private int star;
+	public String getFullName() {
+		return fullName;
+	}
 
-	@ManyToOne
-	@JoinColumn(name = "user_id")
-	private UserEntity user;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 
 	public String getContent() {
 		return content;
@@ -54,14 +79,6 @@ public class FeedbackEntity extends BaseEntity {
 
 	public void setStar(int star) {
 		this.star = star;
-	}
-
-	public UserEntity getUser() {
-		return user;
-	}
-
-	public void setUser(UserEntity user) {
-		this.user = user;
 	}
 
 }

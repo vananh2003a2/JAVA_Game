@@ -2,12 +2,19 @@ package com.laptrinhjavaweb.api.DTO;
 
 import java.util.Date;
 
-public class FeedbackDTO extends AbstractDTO {
+public class FeedbackDTO  {
 	private String content;
 	private Date time;
 	private int star;
-	private String emailUser;
-	private UserDTO user;
+	private String fullName;
+	
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
 
 	public String getContent() {
 		return content;
@@ -33,19 +40,4 @@ public class FeedbackDTO extends AbstractDTO {
 		this.star = star;
 	}
 
-	public String getEmailUser() {
-		return emailUser;
-	}
-
-	public void setEmailUser(String emailUser) {
-		this.emailUser = emailUser;
-	}
-
-	public UserDTO getUserDTO() {
-		return user;
-	}
-
-	public void setUserDTO(UserDTO userDTO) {
-		this.user = userDTO;
-	}
 }

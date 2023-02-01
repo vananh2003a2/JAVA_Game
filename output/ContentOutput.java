@@ -1,17 +1,14 @@
 package com.laptrinhjavaweb.output;
 
-import com.laptrinhjavaweb.api.DTO.AbstractDTO;
-import com.laptrinhjavaweb.api.DTO.TitleDTO;
-
-public class ContentOutput extends AbstractDTO{
+public class ContentOutput {
+	private String title;
 	private String contentDetails;
-	private TitleDTO title;
 
-	public TitleDTO getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
-	public void setTitle(TitleDTO title) {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 
@@ -22,5 +19,5 @@ public class ContentOutput extends AbstractDTO{
 	public void setContentDetails(String contentDetails) {
 		this.contentDetails = contentDetails;
 	}
-	
+
 }

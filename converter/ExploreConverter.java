@@ -9,7 +9,6 @@ import com.laptrinhjavaweb.entity.ExploreEntity;
 public class ExploreConverter {
 	public ExploreDTO toDTO(ExploreEntity entity) {
 		ExploreDTO dto = new ExploreDTO();
-		dto.setId(entity.getId());
 		dto.setContentExplore(entity.getContentExplore());
 		return dto;
 	}

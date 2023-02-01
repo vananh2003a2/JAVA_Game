@@ -1,19 +1,34 @@
 package com.laptrinhjavaweb.api.DTO;
 
-import java.util.Date;
-
-public class FeedbackInput extends AbstractDTO {
+public class FeedbackInput {
 	private String content;
-	private Date time;
 	private int star;
-	private String emailUser;
+	private String email;
+	private String fullName;
+	private String phone;
 
-	public String getEmailUser() {
-		return emailUser;
+	public String getFullName() {
+		return fullName;
 	}
 
-	public void setEmailUser(String emailUser) {
-		this.emailUser = emailUser;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getContent() {
@@ -22,14 +37,6 @@ public class FeedbackInput extends AbstractDTO {
 
 	public void setContent(String content) {
 		this.content = content;
-	}
-
-	public Date getTime() {
-		return time;
-	}
-
-	public void setTime(Date time) {
-		this.time = time;
 	}
 
 	public int getStar() {
