@@ -2,12 +2,12 @@ package com.laptrinhjavaweb.api.DTO;
 
 import java.util.Date;
 
-public class FeedbackDTO  {
-	private String content;
-	private Date time;
-	private int star;
+public class FeedbackDTO {
 	private String fullName;
-	
+	private String content;
+	private int star;
+	private Date time;
+
 	public String getFullName() {
 		return fullName;
 	}

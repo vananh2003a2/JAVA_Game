@@ -3,14 +3,16 @@ package com.laptrinhjavaweb.output;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShowFeedback {
-	private List<FeedbackOutput> listFeedback = new ArrayList<>();
+import com.laptrinhjavaweb.api.DTO.FeedbackDTO;
 
-	public List<FeedbackOutput> getListFeedback() {
+public class ShowFeedback {
+	private List<FeedbackDTO> listFeedback = new ArrayList<>();
+
+	public List<FeedbackDTO> getListFeedback() {
 		return listFeedback;
 	}
 
-	public void setListFeedback(List<FeedbackOutput> listFeedback) {
+	public void setListFeedback(List<FeedbackDTO> listFeedback) {
 		this.listFeedback = listFeedback;
 	}
 	

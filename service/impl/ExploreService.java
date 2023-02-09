@@ -21,11 +21,33 @@ public class ExploreService implements IExploreService {
 	private ExploreConverter exploreConverter;
 
 	@Override
-	public List<ExploreDTO> findAll() {
+	public List<ExploreDTO> findAll_ENG() {
 		List<ExploreDTO> results = new ArrayList<>();
 		List<ExploreEntity> entities = exploreRepository.findAll();
 		for (ExploreEntity item : entities) {
-			ExploreDTO exploreOutput = exploreConverter.toDTO(item);
+			ExploreDTO exploreOutput = exploreConverter.toDTO_ENG(item);
+			results.add(exploreOutput);
+		}
+		return results;
+	}
+
+	@Override
+	public List<ExploreDTO> findAll_VIE() {
+		List<ExploreDTO> results = new ArrayList<>();
+		List<ExploreEntity> entities = exploreRepository.findAll();
+		for (ExploreEntity item : entities) {
+			ExploreDTO exploreOutput = exploreConverter.toDTO_VIE(item);
+			results.add(exploreOutput);
+		}
+		return results;
+	}
+
+	@Override
+	public List<ExploreDTO> findAll_JPN() {
+		List<ExploreDTO> results = new ArrayList<>();
+		List<ExploreEntity> entities = exploreRepository.findAll();
+		for (ExploreEntity item : entities) {
+			ExploreDTO exploreOutput = exploreConverter.toDTO_JPN(item);
 			results.add(exploreOutput);
 		}
 		return results;

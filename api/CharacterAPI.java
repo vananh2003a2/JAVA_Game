@@ -12,10 +12,24 @@ public class CharacterAPI {
 	@Autowired
 	private ICharacterService characterService;
 
-	@GetMapping(value = "/character")
-	public CharacterOutput showCharacter() {
+	@GetMapping(value = "/character/ENG")
+	public CharacterOutput showCharacter_ENG() {
 		CharacterOutput result = new CharacterOutput();
-		result.setListResult(characterService.findAll());
+		result.setListResult(characterService.findAll_ENG());
+		return result;
+	}
+
+	@GetMapping(value = "/character/VIE")
+	public CharacterOutput showCharacter_VIE() {
+		CharacterOutput result = new CharacterOutput();
+		result.setListResult(characterService.findAll_VIE());
+		return result;
+	}
+
+	@GetMapping(value = "/character/JPN")
+	public CharacterOutput showCharacter_JPN() {
+		CharacterOutput result = new CharacterOutput();
+		result.setListResult(characterService.findAll_JPN());
 		return result;
 	}
 }

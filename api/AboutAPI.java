@@ -12,10 +12,24 @@ public class AboutAPI {
 	@Autowired
 	private IContentService contentService;
 
-	@GetMapping(value = "/about")
-	public AboutOutput showAbout() {
+	@GetMapping(value = "/about/ENG")
+	public AboutOutput showAbout_ENG() {
 		AboutOutput result = new AboutOutput();
-		result.setListContent(contentService.findAll());
+		result.setListContent(contentService.findAll_ENG());
+		return result;
+	}
+
+	@GetMapping(value = "/about/VIE")
+	public AboutOutput showAbout_VIE() {
+		AboutOutput result = new AboutOutput();
+		result.setListContent(contentService.findAll_VIE());
+		return result;
+	}
+
+	@GetMapping(value = "/about/JPN")
+	public AboutOutput showAbout_JPN() {
+		AboutOutput result = new AboutOutput();
+		result.setListContent(contentService.findAll_JPN());
 		return result;
 	}
 }

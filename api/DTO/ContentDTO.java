@@ -1,6 +1,6 @@
-package com.laptrinhjavaweb.output;
+package com.laptrinhjavaweb.api.DTO;
 
-public class ContentOutput {
+public class ContentDTO {
 	private String title;
 	private String contentDetails;
 

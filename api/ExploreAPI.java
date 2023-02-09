@@ -9,13 +9,27 @@ import com.laptrinhjavaweb.service.IExploreService;
 
 @RestController
 public class ExploreAPI {
-@Autowired
-private IExploreService exploreService;
+	@Autowired
+	private IExploreService exploreService;
 
-	@GetMapping(value = "/explore")
-	public ExploreOutput showExplore() {
+	@GetMapping(value = "/explore/ENG")
+	public ExploreOutput showExplore_ENG() {
 		ExploreOutput result = new ExploreOutput();
-		result.setListResult(exploreService.findAll());
-		return result ;
+		result.setListResult(exploreService.findAll_ENG());
+		return result;
+	}
+
+	@GetMapping(value = "/explore/VIE")
+	public ExploreOutput showExplore_VIE() {
+		ExploreOutput result = new ExploreOutput();
+		result.setListResult(exploreService.findAll_ENG());
+		return result;
+	}
+
+	@GetMapping(value = "/explore/JPN")
+	public ExploreOutput showExplore_JPN() {
+		ExploreOutput result = new ExploreOutput();
+		result.setListResult(exploreService.findAll_JPN());
+		return result;
 	}
 }

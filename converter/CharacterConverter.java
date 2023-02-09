@@ -7,9 +7,21 @@ import com.laptrinhjavaweb.entity.CharacterEntity;
 
 @Component
 public class CharacterConverter {
-	public CharacterDTO toDTO(CharacterEntity entity) {
+	public CharacterDTO toDTO_ENG(CharacterEntity entity) {
 		CharacterDTO dto = new CharacterDTO();
-		dto.setDescription(entity.getDescription());
+		dto.setDescription(entity.getDescriptionENG());
+		return dto;
+	}
+
+	public CharacterDTO toDTO_VIE(CharacterEntity entity) {
+		CharacterDTO dto = new CharacterDTO();
+		dto.setDescription(entity.getDescriptionVIE());
+		return dto;
+	}
+
+	public CharacterDTO toDTO_JPN(CharacterEntity entity) {
+		CharacterDTO dto = new CharacterDTO();
+		dto.setDescription(entity.getDescriptionJPN());
 		return dto;
 	}
 }
