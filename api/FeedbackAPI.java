@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.laptrinhjavaweb.api.DTO.FeedbackDTO;
 import com.laptrinhjavaweb.api.DTO.FeedbackInput;
+import com.laptrinhjavaweb.output.MainBox;
 import com.laptrinhjavaweb.output.ShowFeedback;
 import com.laptrinhjavaweb.service.IFeedbackService;
 
@@ -23,15 +24,12 @@ public class FeedbackAPI {
 		return feedbackService.save(model);
 	}
 
-	@GetMapping(value = "/feedbacknumber")
-	public Long feedbackNumber() {
-		return feedbackService.feedbackNumber();
-	}
-
-	@GetMapping(value = "/AvgStar")
-	public Long StarNumber() {
-		Long countFB=feedbackService.feedbackNumber();
-		return feedbackService.StarNumber()/countFB;
+	@GetMapping(value = "/mainbox")
+	public MainBox mainBox() {
+		MainBox result = new MainBox();
+		result.setNumberFB(feedbackService.feedbackNumber());
+		result.setAvgStar(feedbackService.StarNumber() / feedbackService.feedbackNumber());
+		return result;
 	}
 
 	@GetMapping(value = "/feedback/TimeAsc")

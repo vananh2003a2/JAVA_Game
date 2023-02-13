@@ -1,5 +1,7 @@
 package com.laptrinhjavaweb.converter;
 
+import java.util.Date;
+
 import org.springframework.stereotype.Component;
 
 import com.laptrinhjavaweb.api.DTO.FeedbackDTO;
@@ -22,9 +24,11 @@ public class FeedbackConverter {
 
 	public FeedbackDTO toDTO(FeedbackEntity entity) {
 		FeedbackDTO dto = new FeedbackDTO();
+		Date date1=entity.getTime();
+		long longtime = date1.getTime();
 		dto.setContent(entity.getContent());
 		dto.setStar(entity.getStar());
-		dto.setTime(entity.getTime());
+		dto.setTime(longtime);
 		dto.setFullName(entity.getFullName());
 		return dto;
 	}

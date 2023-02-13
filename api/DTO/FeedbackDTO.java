@@ -6,7 +6,7 @@ public class FeedbackDTO {
 	private String fullName;
 	private String content;
 	private int star;
-	private Date time;
+	private String time;
 
 	public String getFullName() {
 		return fullName;
@@ -24,12 +24,13 @@ public class FeedbackDTO {
 		this.content = content;
 	}
 
-	public Date getTime() {
+	public String getTime() {
 		return time;
 	}
 
-	public void setTime(Date time) {
-		this.time = time;
+	public void setTime(long longtime) {
+		Date date= new Date(longtime);
+		this.time = date.toString();
 	}
 
 	public int getStar() {
