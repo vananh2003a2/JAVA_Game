@@ -11,4 +11,6 @@ public interface IFeedbackService {
 	List<FeedbackDTO> findAllOrderByStarAsc();
 	List<FeedbackDTO> findAllOrderByTimeDesc();
 	List<FeedbackDTO> findAllOrderByStarDesc();
+	Long feedbackNumber();
+	Long StarNumber();
 }

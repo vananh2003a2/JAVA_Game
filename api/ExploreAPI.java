@@ -1,12 +1,14 @@
 package com.laptrinhjavaweb.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.laptrinhjavaweb.output.ExploreOutput;
 import com.laptrinhjavaweb.service.IExploreService;
 
+@CrossOrigin
 @RestController
 public class ExploreAPI {
 	@Autowired

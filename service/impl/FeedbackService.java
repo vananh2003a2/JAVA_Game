@@ -74,5 +74,15 @@ public class FeedbackService implements IFeedbackService {
 		}
 		return result;
 	}
+	
+	@Override
+	public Long feedbackNumber() {
+		return feedbackRepository.count();
+	}
+
+	@Override
+	public Long StarNumber() {
+		return feedbackRepository.StarNumber();
+	}
 
 }

@@ -11,14 +11,15 @@ public interface FeedbackRepository extends JpaRepository<FeedbackEntity, Long> 
 	@Query("FROM FeedbackEntity ORDER BY time ASC")
 	List<FeedbackEntity> findAllOrderByTimeAsc();
 
-    @Query("FROM FeedbackEntity ORDER BY star ASC")
+	@Query("FROM FeedbackEntity ORDER BY star ASC")
 	List<FeedbackEntity> findAllOrderByStarAsc();
-    
-    @Query("FROM FeedbackEntity ORDER BY time DESC")
+
+	@Query("FROM FeedbackEntity ORDER BY time DESC")
 	List<FeedbackEntity> findAllOrderByTimeDesc();
 
-    @Query("FROM FeedbackEntity ORDER BY star DESC")
+	@Query("FROM FeedbackEntity ORDER BY star DESC")
 	List<FeedbackEntity> findAllOrderByStarDesc();
-    
-    
+
+	@Query("SELECT SUM(star) FROM FeedbackEntity")
+	Long StarNumber();
 }
