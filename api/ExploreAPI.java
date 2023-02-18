@@ -14,21 +14,22 @@ public class ExploreAPI {
 	@Autowired
 	private IExploreService exploreService;
 
-	@GetMapping(value = "/explore/ENG")
+	@GetMapping(value = "akagoe/explore/ENG")
 	public ExploreOutput showExplore_ENG() {
 		ExploreOutput result = new ExploreOutput();
+		exploreService.updateExplore();
 		result.setListResult(exploreService.findAll_ENG());
 		return result;
 	}
 
-	@GetMapping(value = "/explore/VIE")
+	@GetMapping(value = "akagoe/explore/VIE")
 	public ExploreOutput showExplore_VIE() {
 		ExploreOutput result = new ExploreOutput();
-		result.setListResult(exploreService.findAll_ENG());
+		result.setListResult(exploreService.findAll_VIE());
 		return result;
 	}
 
-	@GetMapping(value = "/explore/JPN")
+	@GetMapping(value = "akagoe/explore/JPN")
 	public ExploreOutput showExplore_JPN() {
 		ExploreOutput result = new ExploreOutput();
 		result.setListResult(exploreService.findAll_JPN());

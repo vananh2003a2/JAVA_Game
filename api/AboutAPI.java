@@ -14,21 +14,22 @@ public class AboutAPI {
 	@Autowired
 	private IContentService contentService;
 
-	@GetMapping(value = "/about/ENG")
+	@GetMapping(value = "akagoe/about/ENG")
 	public AboutOutput showAbout_ENG() {
 		AboutOutput result = new AboutOutput();
+		contentService.updateIntroduce();
 		result.setListContent(contentService.findAll_ENG());
 		return result;
 	}
 
-	@GetMapping(value = "/about/VIE")
+	@GetMapping(value = "akagoe/about/VIE")
 	public AboutOutput showAbout_VIE() {
 		AboutOutput result = new AboutOutput();
 		result.setListContent(contentService.findAll_VIE());
 		return result;
 	}
 
-	@GetMapping(value = "/about/JPN")
+	@GetMapping(value = "akagoe/about/JPN")
 	public AboutOutput showAbout_JPN() {
 		AboutOutput result = new AboutOutput();
 		result.setListContent(contentService.findAll_JPN());
