@@ -68,6 +68,7 @@ public class ContentService implements IContentService {
 				"Adventure and puzzle format\r\n" + 
 				"The game will be a journey to help children learn soft skills such as sorting garbage, going to the supermarket by themselves, arranging furniture, etc.\r\n" + 
 				"Challenges will be repeated daily in different locations, like the children's daily lives, so they learn those skills.";
+		
 		String contentDetailsVIE="赤声 là một trò chơi hướng tới giáo dục dành cho trẻ em từ 6 tuổi trở lên.\r\n" + 
 				"Tên kết hợp giữa 赤ちゃん (trẻ em) và 声 (âm thanh) thể hiện tiếng nói của trẻ em.\r\n" + 
 				"Hình thức: Phiêu lưu và giải đố.\r\n" + 

@@ -3,6 +3,7 @@ package com.laptrinhjavaweb.api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.laptrinhjavaweb.output.CharacterOutput;
@@ -13,11 +14,15 @@ import com.laptrinhjavaweb.service.ICharacterService;
 public class CharacterAPI {
 	@Autowired
 	private ICharacterService characterService;
+	
+	@PostMapping(value = "akagoe/character/pushData")
+	public void Pust_Data (){
+		characterService.updateCharacter();
+	}
 
 	@GetMapping(value = "akagoe/character/ENG")
 	public CharacterOutput showCharacter_ENG() {
 		CharacterOutput result = new CharacterOutput();
-		characterService.updateCharacter();
 		result.setListResult(characterService.findAll_ENG());
 		return result;
 	}
