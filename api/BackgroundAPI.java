@@ -19,6 +19,8 @@ public class BackgroundAPI {
 		BackgroundOutput result = new BackgroundOutput();
 		backgroundService.updateBackground();
 		result.setBackground(backgroundService.findAll());
+		result.setNameOfGame("Akagoe");
+		result.setUrlDownLoad("./assets/file/setup.exe\r\n");
 		return result;
 	}
 }
