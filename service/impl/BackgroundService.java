@@ -22,7 +22,7 @@ public class BackgroundService implements IBackgroundService {
 	@Override
 	public List<BackgroundDTO> findByIdName(String idName) {
 		List<BackgroundDTO> results = new ArrayList<>();
-		List<BackgroundEntity> entities = backgroundRepository.findAll();
+		List<BackgroundEntity> entities = backgroundRepository.findByIdName(idName);
 		for (BackgroundEntity item : entities) {
 			BackgroundDTO backgroundDTO = backgroundConverter.toDTO(item);
 			results.add(backgroundDTO);

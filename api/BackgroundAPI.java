@@ -19,19 +19,19 @@ public class BackgroundAPI {
 	public BackgroundOutput showLink(@PathVariable("idName") String idName) {
 		BackgroundOutput result = new BackgroundOutput();
 		result.setBackground(backgroundService.findByIdName(idName));
-		if (idName == "akagoe") {
+		if (idName.equals("akagoe")) {
 			result.setNameOfGame("赤声\r\nChildren's Voices");
 			result.setUrlDownLoad("./assets/file/setup.exe\r\n");
 		}
-		if (idName == "vot") {
+		if (idName.equals("vot")) {
 			result.setNameOfGame("vot");
 			result.setUrlDownLoad("./assets/file/setup.exe\r\n");
 		}
-		if (idName == "soulhalo") {
+		if (idName.equals("soulhalo")) {
 			result.setNameOfGame("soulhalo");
 			result.setUrlDownLoad("./assets/file/setup.exe\r\n");
 		}
-		if (idName == "revivedknight") {
+		if (idName.equals("revivedknight")) {
 			result.setNameOfGame("revivedknight");
 			result.setUrlDownLoad("./assets/file/setup.exe\r\n");
 		}
